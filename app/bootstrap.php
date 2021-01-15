@@ -1,6 +1,9 @@
 <?php
 
-//Load in core framework libraries
-require_once '../app/lib/Core.php';
-require_once '../app/lib/Controller.php';
-require_once '../app/lib/Database.php';
+//Load in environment
+require_once 'config/env.php';
+
+//Autoload core framework libraries
+spl_autoload_register(function ($className) {
+    require '../app/lib/' . $className . '.php';
+});
