@@ -1,0 +1,4 @@
+/node_modules
+/vendor
+/.vscode
+/app/config/env.php
