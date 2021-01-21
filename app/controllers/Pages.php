@@ -9,6 +9,12 @@ class Pages extends Controller
 
     public function index()
     {
-        $this->view('pages/index');
+        $examples = $this->exampleModel->getExamples();
+
+        $data = [
+            'examples' => $examples
+        ];
+
+        $this->view('pages/index', $data);
     }
 }

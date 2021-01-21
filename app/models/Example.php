@@ -12,4 +12,15 @@ class Example
     {
         $this->db = new Database();
     }
+
+    /**
+     * Get a list of examples
+     *
+     * @return object
+     */
+    public function getExamples()
+    {
+        $this->db->prepare("SELECT * FROM example");
+        return $this->db->resultSet();
+    }
 }
